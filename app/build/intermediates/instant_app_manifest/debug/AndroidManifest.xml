@@ -9,10 +9,9 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="28" />
 
-    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
     <!-- <uses-sdk android:minSdkVersion="14"/> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.hack.ComplaintList" />
         <activity android:name="com.example.hack.StudentComplaint" />
         <activity android:name="com.example.hack.WorkplaceComplaint" />
         <activity android:name="com.example.hack.DomesticComplaint" />

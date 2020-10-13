@@ -46,7 +46,7 @@ public class DomesticComplaint extends AppCompatActivity {
         Contact = findViewById(R.id.Phone);
         Description = findViewById(R.id.DescribeCrime);
         complaint = new Complaint();
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Complaint");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Type2");
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

@@ -28,11 +28,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
+import static android.media.CamcorderProfile.get;
+
 
 public class HomePage extends AppCompatActivity {
 
-
-    static int count = 0;
+    static int totalCount = 0;
+    ArrayList<Integer> typeCount;
+    String[] category = {"Workplace", "Domestic", "Student"};
 
     com.github.mikephil.charting.charts.PieChart pieChart;
     DatabaseReference ref;
@@ -44,71 +47,37 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        pieChart =  findViewById(R.id.pieChart);
+        pieChart = findViewById(R.id.pieChart);
 
         crimeCount = new HashMap<String, Float>();
 
         countNumber();
 
-        //to show the Pie Chart
-        pieChartFunc();
 
     }
 
     private void countNumber() {
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Complaint");
+        //getting type 1  type 1 - workplace, type 2- domestic. type 3- student
 
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists())
-                    count = (int) snapshot.getChildrenCount();
-                Log.i("pie", String.valueOf(count));
+        typeCount = new ArrayList<>();
 
-                retrieveData();
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-    }
-
-    private void retrieveData() {
-
-        Log.i("count:", String.valueOf(count));
-
-
-        for(int i = 1; i <= count; i++)
+        for(int i = 1; i <= 3; i++)
         {
-            ref = FirebaseDatabase.getInstance().getReference().child("Complaint").child("Complaint"+Integer.toString(i));
+            ref = FirebaseDatabase.getInstance().getReference().child("Type" + Integer.toString(i));
 
             final int finalI = i;
+            final int[] val = new int[1];
             ref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists())
+                        val[0] = ((int) snapshot.getChildrenCount());
 
-                    String str = snapshot.child("sub_category").getValue().toString();
-                    Float val;
-                    Log.i("Type of crime: ", str);
-                    if(crimeCount.containsKey(str))
-                    {
-                        val = crimeCount.get(str);
-                        crimeCount.put(str, (val+1));
-                    }
-                    else {
-                        
-                        crimeCount.put(str, 1f);
-                    }
 
-                    Log.i("crimeCount"+String.valueOf(finalI), String.valueOf(crimeCount.size()));
+                    typeCount.add(val[0]);
+                    totalCount += val[0];
 
-                    pieChartFunc();
                 }
 
                 @Override
@@ -117,74 +86,58 @@ public class HomePage extends AppCompatActivity {
                 }
             });
         }
+        pieChartFunc();
 
     }
 
-    private void pieChartFunc() {
+
+        private void pieChartFunc() {
 
 
-        ArrayList<PieEntry> types = new ArrayList<PieEntry>();
+            ArrayList<PieEntry> types = new ArrayList<PieEntry>();
 
-        Log.i("crime size", String.valueOf(crimeCount.size()));
+            for (int i = 0; i < typeCount.size(); i++) {
+                Float value = (typeCount.get(i) / (float) totalCount) * 100.0f;
 
+                types.add(new PieEntry(value, category[i]));
 
-        Iterator crimeItr = crimeCount.entrySet().iterator();
+            }
 
-        while (crimeItr.hasNext()) {
-            HashMap.Entry mapElement = (HashMap.Entry)crimeItr.next();
-            Float value = ((Float)mapElement.getValue()), mul = 100.0f;
-            value = (value / (float)(count)) *mul;
-            Log.i("pieEntry",mapElement.getKey() + " : " + value);
+            PieDataSet dataSet = new PieDataSet(types, "Types Of Crimes");
 
-            types.add(new PieEntry(value, mapElement.getKey()));
+            dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+            dataSet.setValueTextColors(Collections.singletonList(Color.BLACK));
+            dataSet.setValueTypeface(Typeface.SANS_SERIF);
+            dataSet.setValueTextSize(16f);
+
+            PieData pieData = new PieData(dataSet);
+
+            pieChart.setData(pieData);
+            pieData.setDrawValues(true);
+            pieChart.getDescription().setEnabled(false);
+            pieChart.setRotationEnabled(true);
+            pieChart.setCenterText("Complaints");
+            pieChart.setAlpha(0.8f);
+            pieChart.animate();
 
         }
 
 
-
-        /*Set keys = crimeCount.keySet();
-
-
-        for(Iterator i = keys.iterator(); i.hasNext();) {
-            String key = (String) i.next();
-            Integer value = (Integer) crimeCount.get(key);
-
-            types.add(new PieEntry(value, key));
-
-            Log.i("pieEntry", value+" "+key);
-
-        }*/
-
-        PieDataSet dataSet = new PieDataSet(types, "Types Of Crimes");
-
-        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-        dataSet.setValueTextColors(Collections.singletonList(Color.BLACK));
-        dataSet.setValueTypeface(Typeface.SANS_SERIF);
-        dataSet.setValueTextSize(16f);
-
-        PieData pieData = new PieData(dataSet);
-
-        pieChart.setData(pieData);
-        pieData.setDrawValues(true);
-        pieChart.getDescription().setEnabled(false);
-        pieChart.setRotationEnabled(true);
-        pieChart.setCenterText("Complaints");
-        pieChart.setAlpha(0.8f);
-        pieChart.animate();
-
-    }
-
-    public void workplace(View view)
+    public void workplace (View view)
     {
         startActivity(new Intent(HomePage.this, WorkplaceComplaint.class));
     }
 
-    public void domestic(View view)
+    public void domestic (View view)
     {
         startActivity(new Intent(HomePage.this, DomesticComplaint.class));
     }
 
     public void student(View view) {
         startActivity(new Intent(HomePage.this, StudentComplaint.class));
+    }
+
+    public void seeAllComplaints(View view) {
+        startActivity(new Intent(HomePage.this, ComplaintList.class));
     }
 }

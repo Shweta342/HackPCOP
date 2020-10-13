@@ -49,7 +49,7 @@ public class StudentComplaint extends AppCompatActivity {
         Institution= findViewById(R.id.institution);
         complaint = new StudentComplaint.Complaint();
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Complaint");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Type3");
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

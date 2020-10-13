@@ -44,7 +44,7 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
 
         complaint = new NewCrimeComplaint();
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Complaint");
+        ref = FirebaseDatabase.getInstance().getReference().child("Type1");
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -113,7 +113,7 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
         complaint.setProb(prob);
         complaint.setOther(other);
 
-        ref.child("Complaint"+(count+1)).setValue(complaint);
+        ref.child(String.valueOf((count+1))).setValue(complaint);
     }
 
 
