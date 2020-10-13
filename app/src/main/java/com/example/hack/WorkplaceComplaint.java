@@ -3,18 +3,15 @@ package com.example.hack;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.PieChart;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -74,7 +71,7 @@ public class WorkplaceComplaint extends AppCompatActivity implements AdapterView
         address = findViewById(R.id.address);
         otherType = findViewById(R.id.other_problem);
         pincode = findViewById(R.id.pincode);
-        email= findViewById(R.id.email);
+        email= findViewById(R.id.username);
         problem = findViewById(R.id.problem);
         spinner = findViewById(R.id.sub_category_spinner);
         company = findViewById(R.id.company);

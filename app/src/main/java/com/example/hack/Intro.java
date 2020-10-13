@@ -24,5 +24,14 @@ LottieAnimationView lottieAnimationView;
         bg.animate().translationX(-1600).setDuration(1000).setStartDelay(4000);
         lottieAnimationView.animate().translationX(1400).setDuration(1000).setStartDelay(4000);
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                final Intent mainIntent =  new Intent(Intro.this, LoginPage.class);
+                Intro.this.startActivity(mainIntent);
+                Intro.this.finish();
+            }
+        },3000);
+
     }
 }

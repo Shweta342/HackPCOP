@@ -1741,7 +1741,7 @@ id animateToEnd
 id animateToStart
 id asConfigured
 id async
-id attempts_remainig
+id attempt
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -1834,6 +1834,7 @@ id floating
 id forever
 id ghost_view
 id ghost_view_holder
+id goback
 id gone
 id graph
 id graph_wrap
@@ -1852,6 +1853,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id img
 id info
 id invisible
@@ -1869,8 +1871,6 @@ id line3
 id linear
 id listMode
 id list_item
-id login_btn
-id login_page
 id logo
 id lottie_layer_name
 id masked
@@ -1906,9 +1906,11 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id name
 id name_applicant
 id navigation_header_container
 id never
+id newUser
 id noScroll
 id none
 id normal
@@ -1925,7 +1927,6 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
-id pass
 id password
 id password_toggle
 id path
@@ -1978,8 +1979,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
-id signUp_page
-id signup_btn
+id signup
 id sin
 id skipCollapsed
 id slide
@@ -2060,7 +2060,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userName
+id username
 id view_offset_helper
 id visible
 id wide

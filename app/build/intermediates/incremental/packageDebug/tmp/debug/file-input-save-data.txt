@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 13 00:47:32 IST 2020
+#Tue Oct 13 01:58:19 IST 2020
 1.base=C\:\\Splash11\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
