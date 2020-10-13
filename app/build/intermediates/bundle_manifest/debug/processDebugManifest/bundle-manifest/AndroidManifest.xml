@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.hack.StudentComplaint" />
         <activity android:name="com.example.hack.WorkplaceComplaint" />
         <activity android:name="com.example.hack.DomesticComplaint" />
         <activity android:name="com.example.hack.HomePage" />

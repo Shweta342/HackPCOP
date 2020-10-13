@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.DropBoxManager;
 import android.util.Log;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -101,6 +102,7 @@ public class HomePage extends AppCompatActivity {
                         crimeCount.put(str, (val+1));
                     }
                     else {
+                        
                         crimeCount.put(str, 1f);
                     }
 
@@ -170,5 +172,19 @@ public class HomePage extends AppCompatActivity {
         pieChart.setAlpha(0.8f);
         pieChart.animate();
 
+    }
+
+    public void workplace(View view)
+    {
+        startActivity(new Intent(HomePage.this, WorkplaceComplaint.class));
+    }
+
+    public void domestic(View view)
+    {
+        startActivity(new Intent(HomePage.this, DomesticComplaint.class));
+    }
+
+    public void student(View view) {
+        startActivity(new Intent(HomePage.this, StudentComplaint.class));
     }
 }

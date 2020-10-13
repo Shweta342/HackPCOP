@@ -1,4 +1,4 @@
-#Tue Oct 13 02:07:29 IST 2020
+#Tue Oct 13 20:11:52 IST 2020
 base.0=C\:\\Splash11\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 path.1=classes.dex
 renamed.1=classes2.dex

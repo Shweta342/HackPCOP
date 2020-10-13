@@ -1218,6 +1218,40 @@
             ]
         },
         {
+            "outputFile": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\values-v28_values-v28.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\e4482da57388568904509bde8c91385b\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,143,231,319,407,494,581,668",
+                        "endColumns": "87,87,87,87,86,86,86,86",
+                        "endOffsets": "138,226,314,402,489,576,663,750"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\65c2ec9750d8dbb9f2f1b8c25f1438f4\\res\\values-v28\\values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,447",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,442,684"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,16",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "755,830,917,1147",
+                        "endLines": "10,11,15,19",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "825,912,1142,1384"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\values-bg_values-bg.arsc.flat",
             "map": [
                 {
@@ -1286,40 +1320,6 @@
                         "startOffsets": "105,225,331,436,522,632,753,833,910,1001,1094,1189,1283,1383,1476,1571,1679,1770,1861,1944,2058,2166,2266,2380,2487,2595,2755,5650",
                         "endColumns": "119,105,104,85,109,120,79,76,90,92,94,93,99,92,94,107,90,90,82,113,107,99,113,106,107,159,98,83",
                         "endOffsets": "220,326,431,517,627,748,828,905,996,1089,1184,1278,1378,1471,1566,1674,1765,1856,1939,2053,2161,2261,2375,2482,2590,2750,2849,5729"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\values-v28_values-v28.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\e4482da57388568904509bde8c91385b\\res\\values-v28\\values-v28.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,143,231,319,407,494,581,668",
-                        "endColumns": "87,87,87,87,86,86,86,86",
-                        "endOffsets": "138,226,314,402,489,576,663,750"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\65c2ec9750d8dbb9f2f1b8c25f1438f4\\res\\values-v28\\values-v28.xml",
-                    "from": {
-                        "startLines": "2,3,4,8",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,447",
-                        "endLines": "2,3,7,11",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,442,684"
-                    },
-                    "to": {
-                        "startLines": "10,11,12,16",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "755,830,917,1147",
-                        "endLines": "10,11,15,19",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "825,912,1142,1384"
                     }
                 }
             ]
@@ -1471,6 +1471,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\values-watch-v21_values-watch-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\65c2ec9750d8dbb9f2f1b8c25f1438f4\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\values-bn_values-bn.arsc.flat",
             "map": [
                 {
@@ -1539,22 +1555,6 @@
                         "startOffsets": "2835,2946,3137,3267,3380,3576,3700,3842,4186,4390,4501,4688,4818,5011,5189,5279,5376",
                         "endColumns": "110,190,129,112,195,123,141,132,203,110,186,129,192,177,89,96,118",
                         "endOffsets": "2941,3132,3262,3375,3571,3695,3837,3970,4385,4496,4683,4813,5006,5184,5274,5371,5490"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Splash11\\app\\build\\intermediates\\res\\merged\\debug\\values-watch-v21_values-watch-v21.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Shaurya Chaubey\\.gradle\\caches\\transforms-2\\files-2.1\\65c2ec9750d8dbb9f2f1b8c25f1438f4\\res\\values-watch-v21\\values-watch-v21.xml",
-                    "from": {
-                        "startLines": "2,6,10",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,271,499",
-                        "endLines": "5,9,13",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "266,494,724"
                     }
                 }
             ]
