@@ -9,13 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ComplaintList"></activity>
+        <activity
+            android:name=".NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ComplaintList" />
         <activity android:name=".StudentComplaint" />
         <activity android:name=".WorkplaceComplaint" />
         <activity android:name=".DomesticComplaint" />
         <activity android:name=".HomePage" />
         <activity android:name=".RegistrationPage" />
         <activity android:name=".LoginPage" />
+
+
         <activity android:name=".Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

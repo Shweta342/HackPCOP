@@ -1226,6 +1226,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1286,6 +1288,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -1467,6 +1470,8 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen nav_header_height
+dimen nav_header_vertical_spacing
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1584,6 +1589,11 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable bg1
+drawable bg2
+drawable bg3
+drawable bg4
+drawable bg5
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1621,6 +1631,12 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_menu_camera
+drawable ic_menu_gallery
+drawable ic_menu_manage
+drawable ic_menu_send
+drawable ic_menu_share
+drawable ic_menu_slideshow
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1657,6 +1673,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable oip
 drawable oip1
+drawable side_nav_bar
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1731,6 +1748,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1738,6 +1756,7 @@ id add
 id address
 id adjust_height
 id adjust_width
+id adminChecknox
 id age
 id age_applicant
 id alertTitle
@@ -1789,6 +1808,7 @@ id confirm_button
 id container
 id content
 id contentPanel
+id content_frame
 id coordinator
 id cos
 id custom
@@ -1821,6 +1841,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -1866,6 +1887,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
 id img
 id info
 id institution
@@ -1922,6 +1944,13 @@ id mtrl_picker_title_text
 id multiply
 id name
 id name_applicant
+id nav_corporate
+id nav_domestic
+id nav_home
+id nav_send
+id nav_share
+id nav_student
+id nav_view
 id navigation_header_container
 id never
 id newUser
@@ -1950,6 +1979,7 @@ id percent
 id pieChart
 id pin
 id pincode
+id pincode2
 id position
 id postLayout
 id problem
@@ -2061,6 +2091,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -2155,9 +2186,12 @@ layout activity_home_page
 layout activity_intro
 layout activity_login_page
 layout activity_main
+layout activity_navigation
 layout activity_registration_page
 layout activity_student_complaint
 layout activity_workplace_complaint
+layout app_bar_navigation
+layout content_navigation
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2174,6 +2208,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_corporate
+layout fragment_doemstic
+layout fragment_home
+layout fragment_student
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2202,6 +2240,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout nav_header_navigation
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2236,6 +2275,8 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu activity_navigation_drawer
+menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -2267,6 +2308,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2310,6 +2352,12 @@ string if_your_issue_is_not_found_in_above_list_write_here
 string item_view_role_description
 string material_slider_range_end
 string material_slider_range_start
+string menu_gallery
+string menu_home
+string menu_send
+string menu_share
+string menu_slideshow
+string menu_tools
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -2345,6 +2393,11 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string nav_header_desc
+string nav_header_subtitle
+string nav_header_title
+string navigation_drawer_close
+string navigation_drawer_open
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2353,6 +2406,7 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_navigation
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -2362,6 +2416,9 @@ style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
 style AppTheme
+style AppTheme_AppBarOverlay
+style AppTheme_NoActionBar
+style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

@@ -59,7 +59,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(LoginPage.this, HomePage.class));
+                    startActivity(new Intent(LoginPage.this, NavigationActivity.class));
                 }
                 else {
                     Toast.makeText(LoginPage.this,"Invalid Credentials",Toast.LENGTH_SHORT).show();
